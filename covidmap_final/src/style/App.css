@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.map__container {
+  width: 80%;
+  height: 45rem;
+}
+
+.container {
+  display: flex;
+}
+
+.second__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter__date {
+  margin-top: 1rem;
+
+  height: 18rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.dateItem {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateItem input {
+  margin-right: 10px;
+}
+
+.summary__table {
+  margin: 2rem;
+  width: max-content;
+  height: 23rem;
+  overflow: scroll;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 33px 1em;
+}
+
+@media (max-width: 779px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .map__container {
+    width: 100%;
+    height: 45rem;
+  }
+
+  .filter__date {
+    margin-top: 3rem;
+  }
+}
+
+.marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  color: brown;
+}
+
+.marker-cluster-small {
+  background-color: rgba(241, 211, 87, 0.6);
+  border-radius: 50px;
+}
+.marker-cluster-small div {
+  background-color: rgba(240, 194, 12, 0.6);
+  border-radius: 20px;
+  text-align: center;
+}
+.marker-cluster-medium {
+  background-color: rgba(253, 156, 115, 0.6);
+
+  border-radius: 50px;
+}
+.marker-cluster-medium div {
+  background-color: rgba(241, 128, 23, 0.6);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.marker-cluster-large {
+
+  background-color: rgba(218, 94, 94, 0.6);
+
+  border-radius: 50px;
+}
+.marker-cluster-large div {
+
+  background-color: rgba(226, 36, 36, 0.6);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.modal-window {
+  position: fixed;
+  top: 15%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.3s;
+  width: 100%;
+}
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-window > div {
+  /* width: 400px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: white;
+}
+
+
